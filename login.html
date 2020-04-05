@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="WaterMe_logo.png" alt="LOGO" />
+      </div>
+      <div class="menu">
+        <form method="POST" class="form" action="/login/">
+          {% csrf_token %}
+          <div class="form-div">
+            <input type="text" name="username" autocomplete="off" required />
+            <label for="username" class="label">
+              <span class="content">Login</span>
+            </label>
+          </div>
+          <div class="form-div">
+            <input
+              type="password"
+              name="password"
+              autocomplete="off"
+              required
+            />
+            <label for="password" class="label">
+              <span class="content">Password</span>
+            </label>
+          </div>
+          <div class="checks">
+            <span class="remember-check">
+              <input type="checkbox" name="remember" class="chbx" />
+              <label for="remember" class="label-chbx">Remember me</label>
+            </span>
+            <span class="forgot-passwd">
+              <a href="reminder.html">Forgot password?</a>
+            </span>
+          </div>
+          <div action="index.html" class="btn">
+            <button type="submit" class="btn-log">
+              Log in
+            </button>
+          </div>
+        </form>
+        <div class="reg-ask">
+          <h2>No account?</h2>
+        </div>
+        <div class="register-link">
+          <a href="register.html">Register now!</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+  557047987660-na2b4tludve3mhjcvhv2t7ag8cios08q.apps.googleusercontent.com
+
+  I3eoYxGBlHGMMcrcU5_C7ePT
+-->

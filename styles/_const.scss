@@ -1,0 +1,16 @@
+$menu-background: rgba(97, 112, 97, 0.3);
+$menu-shadow: rgb(72, 78, 72);
+$label-color: greenyellow;
+$background: url(../tlo.png);
+
+@mixin display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin background {
+  background-image: $background;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

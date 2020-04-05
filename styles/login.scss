@@ -1,0 +1,406 @@
+@import "./const";
+@media only screen and (max-width: 768px) {
+  /* For mobiles */
+  body {
+    background-image: url(tlo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    background-attachment: fixed;
+  }
+
+  .menu {
+    height: 500px;
+    width: 100vw;
+    opacity: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    background-color: $menu-background;
+  }
+
+  .logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-top: 7%;
+
+    img {
+      height: auto;
+      width: auto;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  .form-div {
+    width: 100%;
+    position: relative;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
+
+    label {
+      position: absolute;
+      color: white;
+      padding-top: 50px;
+      bottom: 0px;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border: none;
+      border-bottom: 1px solid lightblue;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-bottom: blue 3px solid;
+        left: 0px;
+        bottom: -1px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .content {
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      bottom: 0px;
+      color: white;
+      border: none;
+    }
+  }
+
+  .form-div input:focus + .label .content,
+  .form-div input:valid + .label .content {
+    transform: translateY(-170%);
+    font-size: 14px;
+    color: $label-color;
+  }
+
+  .form-div input:focus + .label::after,
+  .form-div input:valid + .label::after {
+    transform: translateX(0%);
+  }
+
+  .checks {
+    margin-top: 20px;
+  }
+
+  .forgot-passwd {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .remember-check {
+    margin-right: 40px;
+  }
+
+  .label-chbx {
+    color: white;
+  }
+
+  .btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-log {
+    box-shadow: inset 0px 1px 0px 0px #a4e271;
+    background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+    background-color: #89c403;
+    border-radius: 6px;
+    border: 1px solid #74b807;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528009;
+    margin-top: 40px;
+
+    &:hover {
+      background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+      background-color: #77a809;
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .reg-ask {
+    color: white;
+  }
+
+  .register-link {
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h2 {
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For computers */
+  body {
+    margin: 0;
+    /*background: rgb(44, 142, 1);
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(44, 142, 1, 1) 0%,
+      rgba(97, 176, 3, 1) 50%,
+      rgba(25, 149, 0, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(44, 142, 1, 1) 0%,
+      rgba(97, 176, 3, 1) 50%,
+      rgba(25, 149, 0, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(44, 142, 1, 1) 0%,
+      rgba(97, 176, 3, 1) 50%,
+      rgba(25, 149, 0, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c8e01",endColorstr="#199500",GradientType=1);
+*/
+
+    background-image: $background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+  }
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .menu {
+    height: 400px;
+    width: 650px;
+    background-color: $menu-background;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: calc(50% - 325px);
+    margin-top: 3%;
+    font-family: sans-serif;
+    border-radius: 55px;
+    box-shadow: 10px 10px 10px $menu-shadow;
+  }
+
+  .logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-top: 3%;
+
+    img {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  .form {
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+  }
+
+  .form-div {
+    width: 100%;
+    position: relative;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
+
+    label {
+      position: absolute;
+      color: white;
+      padding-top: 50px;
+      bottom: 0px;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      border: none;
+      border-bottom: 1px solid lightblue;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+        border-bottom: blue 3px solid;
+        left: 0px;
+        bottom: -1px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .content {
+        position: absolute;
+        bottom: 5px;
+        left: 0px;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      bottom: 0px;
+      color: white;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .form-div input:focus + .label .content,
+  .form-div input:valid + .label .content {
+    transform: translateY(-170%);
+    font-size: 14px;
+    color: $label-color;
+  }
+
+  .form-div input:focus + .label::after,
+  .form-div input:valid + .label::after {
+    transform: translateX(0%);
+  }
+
+  .checks {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .forgot-passwd {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .remember-check {
+    margin-right: 40px;
+  }
+
+  .label-chbx {
+    color: white;
+  }
+
+  .btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-log {
+    box-shadow: inset 0px 1px 0px 0px #a4e271;
+    background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+    background-color: #89c403;
+    border-radius: 6px;
+    border: 1px solid #74b807;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #528009;
+    margin-top: 40px;
+
+    &:hover {
+      background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+      background-color: #77a809;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .reg-ask {
+    color: white;
+  }
+
+  .register-link {
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

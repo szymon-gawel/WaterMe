@@ -29,12 +29,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: auto;
     height: 30%;
   }
   .logo img {
+    position: absolute;
     height: auto;
-    width: auto;
+    width: 80%;
   }
   .logo .container {
     width: 100vw;

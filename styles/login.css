@@ -1,58 +1,36 @@
 @media only screen and (max-width: 768px) {
-  /* For mobiles */
   body {
-    background-image: url(tlo.png);
+    background-image: url(../tlo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     font-family: sans-serif;
     background-attachment: fixed;
   }
-  .menu {
-    height: 500px;
+  .container {
     width: 100vw;
+    height: 100vh;
+  }
+  .menu {
+    height: 70%;
+    width: 100%;
     opacity: 1;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    align-items: center;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
     font-family: sans-serif;
     background-color: rgba(97, 112, 97, 0.3);
   }
   .logo {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: auto;
-    height: auto;
-    margin-top: 7%;
+    height: 30%;
   }
   .logo img {
     height: auto;
@@ -91,18 +69,13 @@
     border-bottom: blue 3px solid;
     left: 0px;
     bottom: -1px;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
   .form-div label .content {
     position: absolute;
     bottom: 5px;
     left: 0px;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   .form-div input {
@@ -115,15 +88,13 @@
   }
   .form-div input:focus + .label .content,
   .form-div input:valid + .label .content {
-    -webkit-transform: translateY(-170%);
-            transform: translateY(-170%);
+    transform: translateY(-170%);
     font-size: 14px;
     color: greenyellow;
   }
   .form-div input:focus + .label::after,
   .form-div input:valid + .label::after {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   .checks {
     margin-top: 20px;
@@ -143,20 +114,12 @@
   }
   .btn {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .btn-log {
-    -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
-            box-shadow: inset 0px 1px 0px 0px #a4e271;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #89c403), to(#77a809));
+    box-shadow: inset 0px 1px 0px 0px #a4e271;
     background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
     background-color: #89c403;
     border-radius: 6px;
@@ -173,7 +136,6 @@
     margin-top: 40px;
   }
   .btn-log:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #77a809), to(#89c403));
     background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
     background-color: #77a809;
   }
@@ -197,45 +159,15 @@
 }
 
 @media only screen and (min-width: 768px) {
-  /* For computers */
   body {
     margin: 0;
-    /*background: rgb(44, 142, 1);
-    background: -moz-linear-gradient(
-      90deg,
-      rgba(44, 142, 1, 1) 0%,
-      rgba(97, 176, 3, 1) 50%,
-      rgba(25, 149, 0, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      90deg,
-      rgba(44, 142, 1, 1) 0%,
-      rgba(97, 176, 3, 1) 50%,
-      rgba(25, 149, 0, 1) 100%
-    );
-    background: linear-gradient(
-      90deg,
-      rgba(44, 142, 1, 1) 0%,
-      rgba(97, 176, 3, 1) 50%,
-      rgba(25, 149, 0, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c8e01",endColorstr="#199500",GradientType=1);
-*/
     background-image: url(../tlo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     font-family: sans-serif;
   }
   .container {
@@ -246,37 +178,21 @@
     height: 400px;
     width: 650px;
     background-color: rgba(97, 112, 97, 0.3);
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    align-items: center;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
     margin-left: calc(50% - 325px);
     margin-top: 3%;
     font-family: sans-serif;
     border-radius: 55px;
-    -webkit-box-shadow: 10px 10px 10px #484e48;
-            box-shadow: 10px 10px 10px #484e48;
+    box-shadow: 10px 10px 10px #484e48;
   }
   .logo {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     width: auto;
     height: auto;
     margin-top: 3%;
@@ -287,11 +203,8 @@
   }
   .form {
     position: relative;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-around;
+    align-items: center;
     width: 500px;
   }
   .form-div {
@@ -323,18 +236,13 @@
     border-bottom: blue 3px solid;
     left: 0px;
     bottom: -1px;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
   .form-div label .content {
     position: absolute;
     bottom: 5px;
     left: 0px;
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   .form-div input {
@@ -348,28 +256,20 @@
   }
   .form-div input:focus + .label .content,
   .form-div input:valid + .label .content {
-    -webkit-transform: translateY(-170%);
-            transform: translateY(-170%);
+    transform: translateY(-170%);
     font-size: 14px;
     color: greenyellow;
   }
   .form-div input:focus + .label::after,
   .form-div input:valid + .label::after {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
   .checks {
     margin-top: 20px;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .forgot-passwd a {
     color: white;
@@ -386,20 +286,12 @@
   }
   .btn {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .btn-log {
-    -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
-            box-shadow: inset 0px 1px 0px 0px #a4e271;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #89c403), to(#77a809));
+    box-shadow: inset 0px 1px 0px 0px #a4e271;
     background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
     background-color: #89c403;
     border-radius: 6px;
@@ -416,7 +308,6 @@
     margin-top: 40px;
   }
   .btn-log:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #77a809), to(#89c403));
     background: linear-gradient(to bottom, #77a809 5%, #89c403 100%);
     background-color: #77a809;
   }
@@ -435,4 +326,3 @@
     text-decoration: underline;
   }
 }
-/*# sourceMappingURL=login.css.map */

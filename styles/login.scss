@@ -1,8 +1,9 @@
-@import "./const";
+@import "./_const";
+
+// For mobiles
 @media only screen and (max-width: 768px) {
-  /* For mobiles */
   body {
-    background-image: url(tlo.png);
+    background-image: $background;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -13,9 +14,14 @@
     background-attachment: fixed;
   }
 
-  .menu {
-    height: 500px;
+  .container {
     width: 100vw;
+    height: 100vh;
+  }
+
+  .menu {
+    height: 70%;
+    width: 100%;
     opacity: 1;
     align-items: center;
     display: flex;
@@ -26,13 +32,10 @@
   }
 
   .logo {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display;
+
     width: auto;
-    height: auto;
-    margin-top: 7%;
+    height: 30%;
 
     img {
       height: auto;
@@ -186,32 +189,10 @@
   }
 }
 
+//For computers
 @media only screen and (min-width: 768px) {
-  /* For computers */
   body {
     margin: 0;
-    /*background: rgb(44, 142, 1);
-    background: -moz-linear-gradient(
-      90deg,
-      rgba(44, 142, 1, 1) 0%,
-      rgba(97, 176, 3, 1) 50%,
-      rgba(25, 149, 0, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      90deg,
-      rgba(44, 142, 1, 1) 0%,
-      rgba(97, 176, 3, 1) 50%,
-      rgba(25, 149, 0, 1) 100%
-    );
-    background: linear-gradient(
-      90deg,
-      rgba(44, 142, 1, 1) 0%,
-      rgba(97, 176, 3, 1) 50%,
-      rgba(25, 149, 0, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2c8e01",endColorstr="#199500",GradientType=1);
-*/
-
     background-image: $background;
     background-repeat: no-repeat;
     background-size: cover;

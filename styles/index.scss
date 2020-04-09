@@ -207,6 +207,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 
   .land {
@@ -218,17 +219,14 @@
     height: 55%;
 
     .logoBorder {
+      @include display;
       background-color: $logo-background;
-      width: 27vw;
-      min-width: 450px;
-      margin-top: 12vh;
+      width: 100vw;
       box-shadow: 10px 10px 15px $menu-shadow;
-      border-radius: 20px;
-      padding: 30px 40px 30px 40px;
+      padding: 30px 0px 30px 0px;
 
       img {
-        width: 27vw;
-        min-width: 450px;
+        max-width: 350px;
         height: auto;
       }
     }

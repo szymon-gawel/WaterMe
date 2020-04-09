@@ -185,6 +185,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
   .land {
     position: absolute;
@@ -195,17 +196,16 @@
     height: 55%;
   }
   .land .logoBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 128, 0, 0.3);
-    width: 27vw;
-    min-width: 450px;
-    margin-top: 12vh;
+    width: 100vw;
     box-shadow: 10px 10px 15px #484e48;
-    border-radius: 20px;
-    padding: 30px 40px 30px 40px;
+    padding: 30px 0px 30px 0px;
   }
   .land .logoBorder img {
-    width: 27vw;
-    min-width: 450px;
+    max-width: 350px;
     height: auto;
   }
   .action {

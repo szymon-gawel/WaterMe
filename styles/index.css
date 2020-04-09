@@ -8,6 +8,7 @@
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
   .land {
     position: relative;
@@ -28,7 +29,7 @@
     top: 0;
   }
   .land .logoBorder img {
-    width: 80%;
+    max-width: 300px;
     height: auto;
   }
   .action {

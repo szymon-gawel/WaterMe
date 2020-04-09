@@ -14,8 +14,6 @@ Front-End environment: HTML, SCSS, JavaScript
 
 TBA
 
-All of the source files are for now in Dev-stage branch. I will upload them to master when they will be ready for release.
-
 There is a link where you can check the app! It is: szymon-gawel.github.io/WaterMe
 
 

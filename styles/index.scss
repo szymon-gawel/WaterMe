@@ -194,6 +194,104 @@
   }
 }
 
+//medium devices
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  body {
+    margin: 0;
+  }
+
+  .container {
+    @include background;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .land {
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55%;
+
+    .logoBorder {
+      background-color: $logo-background;
+      width: 27vw;
+      min-width: 450px;
+      margin-top: 12vh;
+      box-shadow: 10px 10px 15px $menu-shadow;
+      border-radius: 20px;
+      padding: 30px 40px 30px 40px;
+
+      img {
+        width: 27vw;
+        min-width: 450px;
+        height: auto;
+      }
+    }
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    .login {
+      margin-bottom: 10vh;
+      margin-top: 10vh;
+    }
+  }
+
+  .myButton {
+    position: relative;
+    background-color: transparent;
+    border-radius: 17px;
+    border: 2px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 12px 55px;
+    text-decoration: none;
+    text-shadow: 0px 1px 5px #2f6627;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      opacity: 0;
+      border-radius: 17px;
+      box-shadow: 3px 4px 0px 0px $menu-shadow;
+      transition: opacity 0.2s ease-in-out;
+      margin-top: -14px;
+      margin-left: -57px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      transform: scale(1.1);
+      transition: transform 0.2s 0s ease-in-out;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
 //laptops and desktops
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   body {

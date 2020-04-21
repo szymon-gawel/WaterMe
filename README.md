@@ -6,8 +6,6 @@ The project is in early development stage, and we are working everyday to releas
 
 ---- Some tech info ----
 
-Back-End environment: Django
-
 Front-End environment: HTML, SCSS, JavaScript
 
 ---- Release date ----
